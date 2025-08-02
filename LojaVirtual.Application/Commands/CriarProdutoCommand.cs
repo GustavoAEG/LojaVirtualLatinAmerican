@@ -1,21 +1,28 @@
 ﻿using MediatR;
 using System;
+using System.Text.Json.Serialization;
 
 namespace LojaVirtual.Application.Commands
 {
     public class CriarProdutoCommand : IRequest<Guid>
     {
-        public string Nome { get; set; }
-        public string Descricao { get; set; }
-        public decimal Preco { get; set; }
-        public int Estoque { get; set; }
-        public string Tamanho { get; set; }
-        public string Genero { get; set; }
-        public Guid CategoriaId { get; set; }
+        public string Nome { get; }
+        public string Descricao { get; }
+        public decimal Preco { get; }
+        public int Estoque { get; }
+        public string Tamanho { get; }
+        public string Genero { get; }
+        public Guid CategoriaId { get; }
 
-        public CriarProdutoCommand() { }
-
-        public CriarProdutoCommand(string nome, string descricao, decimal preco, int estoque, string tamanho, string genero, Guid categoriaId)
+        [JsonConstructor] 
+        public CriarProdutoCommand(
+            string nome,
+            string descricao,
+            decimal preco,
+            int estoque,
+            string tamanho,
+            string genero,
+            Guid categoriaId)
         {
             Nome = nome;
             Descricao = descricao;
