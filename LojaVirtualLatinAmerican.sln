@@ -5,6 +5,12 @@ VisualStudioVersion = 17.14.36301.6 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.API", "LojaVirtual.API\LojaVirtual.API.csproj", "{3F0679E1-4130-42EA-8900-3F72075CB770}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.Application", "LojaVirtual.Application\LojaVirtual.Application.csproj", "{08C760C9-6D0F-4620-BE99-0EBAE20D1CFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.Infrastructure", "LojaVirtual.Infrastructure\LojaVirtual.Infrastructure.csproj", "{31BFB0C7-0B14-4153-95F9-078F4EFA17B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.Domain", "LojaVirtual.Domain\LojaVirtual.Domain.csproj", "{C8FB06B2-8448-4837-A621-58D267BA433E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{3F0679E1-4130-42EA-8900-3F72075CB770}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F0679E1-4130-42EA-8900-3F72075CB770}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F0679E1-4130-42EA-8900-3F72075CB770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08C760C9-6D0F-4620-BE99-0EBAE20D1CFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08C760C9-6D0F-4620-BE99-0EBAE20D1CFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08C760C9-6D0F-4620-BE99-0EBAE20D1CFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08C760C9-6D0F-4620-BE99-0EBAE20D1CFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31BFB0C7-0B14-4153-95F9-078F4EFA17B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31BFB0C7-0B14-4153-95F9-078F4EFA17B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31BFB0C7-0B14-4153-95F9-078F4EFA17B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31BFB0C7-0B14-4153-95F9-078F4EFA17B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8FB06B2-8448-4837-A621-58D267BA433E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8FB06B2-8448-4837-A621-58D267BA433E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8FB06B2-8448-4837-A621-58D267BA433E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8FB06B2-8448-4837-A621-58D267BA433E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
