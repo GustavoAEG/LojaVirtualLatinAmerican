@@ -1,19 +1,29 @@
 using LojaVirtual.Infrastructure.Models;
+using LojaVirtual.Domain.Interfaces;
+using LojaVirtual.Infrastructure.Repositories;
+using LojaVirtual.Application.Commands;
 using Microsoft.EntityFrameworkCore;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// DbContext
 builder.Services.AddDbContext<LojaVirtualContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
+// Repositórios
+builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
+
+// MediatR (ajustar para sua versão)
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssembly(typeof(CriarProdutoCommand).Assembly)
+);
 
 var app = builder.Build();
 
@@ -25,9 +35,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
